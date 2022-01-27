@@ -21,3 +21,17 @@ class PM(models.Model):
 
     def __str__(self) -> str:
         return f"PM {self.name}, {self.tg_username}"
+
+
+class Team(models.Model):
+    pm = models.ForeignKey(
+        PM,
+        verbose_name="Team PM",
+        related_name="teams",
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+    )
+
+    def __str__(self):
+        return f"Team of {self.pm.name}"
