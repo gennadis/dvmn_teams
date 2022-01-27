@@ -1,3 +1,8 @@
+"""Run this command to import generated fixtures:
+
+python manage.py loaddata students.json pms.json teams.json timeslots.json
+"""
+
 import json
 import random
 
