@@ -1,1 +1,6 @@
-{{ student }}
+<h1>{{ student.name }}</h1>
+<ul>
+    {% for time_slot in student.time_slot.all %}
+    <li>{{ time_slot.time_slot }}</li>
+    {% endfor %}
+</ul>
