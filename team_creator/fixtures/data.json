@@ -1,0 +1,97 @@
+[
+    {
+        "model": "team_creator.timeslot",
+        "pk": 1,
+        "fields": {
+            "time_slot": "18:00 - 18:30"
+        }
+    },
+    {
+        "model": "team_creator.timeslot",
+        "pk": 2,
+        "fields": {
+            "time_slot": "19:00 - 19:30"
+        }
+    },
+    {
+        "model": "team_creator.timeslot",
+        "pk": 3,
+        "fields": {
+            "time_slot": "10:00 - 10:30"
+        }
+    },
+    {
+        "model": "team_creator.pm",
+        "pk": 1,
+        "fields": {
+            "name": "Max Fax",
+            "tg_username": "@max_fax",
+            "discord_username": "maxfax#1234",
+            "time_slots": [
+                2,
+                3
+            ]
+        }
+    },
+    {
+        "model": "team_creator.pm",
+        "pk": 2,
+        "fields": {
+            "name": "Henry Miller",
+            "tg_username": "@henry",
+            "discord_username": "henry#3456",
+            "time_slots": [
+                2
+            ]
+        }
+    },
+    {
+        "model": "team_creator.team",
+        "pk": 1,
+        "fields": {
+            "pm": 1,
+            "time_slot": 1
+        }
+    },
+    {
+        "model": "team_creator.team",
+        "pk": 2,
+        "fields": {
+            "pm": 2,
+            "time_slot": 2
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 1,
+        "fields": {
+            "name": "Rerere",
+            "level": "junior",
+            "tg_username": "@rerere",
+            "discord_username": "rerere#1212",
+            "is_far_east": false,
+            "team": null,
+            "time_slot": [
+                1,
+                2,
+                3
+            ]
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 2,
+        "fields": {
+            "name": "Balala",
+            "level": "Novice+",
+            "tg_username": "@kakaka",
+            "discord_username": "kakaka#1231",
+            "is_far_east": true,
+            "team": 1,
+            "time_slot": [
+                1,
+                2
+            ]
+        }
+    }
+]
