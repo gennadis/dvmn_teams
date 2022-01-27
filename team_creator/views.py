@@ -1,25 +1,22 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404
+
+from django.shortcuts import render, get_object_or_404
 
 from .models import Student, TimeSlot, PM
 
 
 def index(request):
     students_list = Student.objects.all()
-    names = ", ".join([s.name for s in students_list])
-
-    pm_list = PM.objects.all()
-    pm_names = ", ".join([pm.name for pm in pm_list])
-
-    time_slots_list = TimeSlot.objects.all()
-    time_slots = ", ".join([t.time_slot for t in time_slots_list])
-
-    output = f"Students: {names}, ||| PMs: {pm_names}, ||| Timeslots: {time_slots}"
-
-    return HttpResponse(output)
+    context = {
+        "students_list": students_list,
+    }
+    print(students_list)
+    return render(request, "team_creator/index.html", context)
 
 
 def student_detail(request, student_id):
-    return HttpResponse("You're looking at student %s." % student_id)
+    student = get_object_or_404(Student, pk=student_id)
+    return render(request, "team_creator/detail.html", {"student": student})
 
 
 def student_time_slots(request, student_id):
