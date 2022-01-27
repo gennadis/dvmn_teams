@@ -1,0 +1,102 @@
+[
+    {
+        "model": "team_creator.pm",
+        "pk": 1,
+        "fields": {
+            "name": "Laura Baker",
+            "tg_username": "@put_buy",
+            "discord_username": "@specific#1234",
+            "time_slots": []
+        }
+    },
+    {
+        "model": "team_creator.pm",
+        "pk": 2,
+        "fields": {
+            "name": "Kimberly Garza",
+            "tg_username": "@leave_brother",
+            "discord_username": "@sea#1234",
+            "time_slots": []
+        }
+    },
+    {
+        "model": "team_creator.pm",
+        "pk": 3,
+        "fields": {
+            "name": "Alex Key",
+            "tg_username": "@name_blood",
+            "discord_username": "@share#1234",
+            "time_slots": []
+        }
+    },
+    {
+        "model": "team_creator.pm",
+        "pk": 4,
+        "fields": {
+            "name": "Karen Williams",
+            "tg_username": "@man_degree",
+            "discord_username": "@move#1234",
+            "time_slots": []
+        }
+    },
+    {
+        "model": "team_creator.pm",
+        "pk": 5,
+        "fields": {
+            "name": "Jonathan Herring",
+            "tg_username": "@meet_management",
+            "discord_username": "@push#1234",
+            "time_slots": []
+        }
+    },
+    {
+        "model": "team_creator.pm",
+        "pk": 6,
+        "fields": {
+            "name": "Richard Walker",
+            "tg_username": "@senior_kid",
+            "discord_username": "@international#1234",
+            "time_slots": []
+        }
+    },
+    {
+        "model": "team_creator.pm",
+        "pk": 7,
+        "fields": {
+            "name": "William Krause",
+            "tg_username": "@kitchen_someone",
+            "discord_username": "@need#1234",
+            "time_slots": []
+        }
+    },
+    {
+        "model": "team_creator.pm",
+        "pk": 8,
+        "fields": {
+            "name": "Billy Graham",
+            "tg_username": "@American_medical",
+            "discord_username": "@pay#1234",
+            "time_slots": []
+        }
+    },
+    {
+        "model": "team_creator.pm",
+        "pk": 9,
+        "fields": {
+            "name": "Michael Duffy PhD",
+            "tg_username": "@audience_spend",
+            "discord_username": "@yard#1234",
+            "time_slots": []
+        }
+    },
+    {
+        "model": "team_creator.pm",
+        "pk": 10,
+        "fields": {
+            "name": "Scott Williams",
+            "tg_username": "@statement_policy",
+            "discord_username": "@most#1234",
+            "time_slots": []
+        }
+    }
+]
