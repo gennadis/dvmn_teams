@@ -45,7 +45,7 @@ class Team(models.Model):
     )
 
     def __str__(self):
-        return f"Team of {self.pm.name}, time slot {self.time_slot.time_slot}"
+        return f"Team {self.pk}"
 
 
 class Student(models.Model):
