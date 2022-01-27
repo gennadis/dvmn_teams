@@ -72,4 +72,4 @@ class Student(models.Model):
     )
 
     def __str__(self) -> str:
-        return f"Student {self.name}, tg: {self.tg_username}, time slots: {self.time_slot.time_slot}"
+        return f"Student {self.name}, tg: {self.tg_username}"
