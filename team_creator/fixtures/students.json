@@ -3,12 +3,11 @@
         "model": "team_creator.student",
         "pk": 1,
         "fields": {
-            "name": "Yolanda Richard",
-            "level": "novice",
-            "tg_username": "@source",
-            "discord_username": "large#2471",
+            "name": "David Martin",
+            "level": "junior",
+            "tg_username": "@break",
+            "discord_username": "occur#2140",
             "is_far_east": true,
-            "team": null,
             "time_slot": []
         }
     },
@@ -16,12 +15,11 @@
         "model": "team_creator.student",
         "pk": 2,
         "fields": {
-            "name": "Brian Jordan",
-            "level": "junior",
-            "tg_username": "@doctor",
-            "discord_username": "benefit#7393",
+            "name": "Paula Daniels",
+            "level": "novice",
+            "tg_username": "@assume",
+            "discord_username": "agency#9421",
             "is_far_east": true,
-            "team": null,
             "time_slot": []
         }
     },
@@ -29,12 +27,11 @@
         "model": "team_creator.student",
         "pk": 3,
         "fields": {
-            "name": "Joshua Tran",
-            "level": "novice",
-            "tg_username": "@week",
-            "discord_username": "chance#6116",
+            "name": "Matthew Lopez",
+            "level": "junior",
+            "tg_username": "@international",
+            "discord_username": "glass#8581",
             "is_far_east": true,
-            "team": null,
             "time_slot": []
         }
     },
@@ -42,12 +39,11 @@
         "model": "team_creator.student",
         "pk": 4,
         "fields": {
-            "name": "Mr. Philip Hall",
-            "level": "novice+",
-            "tg_username": "@agency",
-            "discord_username": "work#8584",
-            "is_far_east": false,
-            "team": null,
+            "name": "Kristin Ross",
+            "level": "junior",
+            "tg_username": "@surface",
+            "discord_username": "explain#9790",
+            "is_far_east": true,
             "time_slot": []
         }
     },
@@ -55,12 +51,11 @@
         "model": "team_creator.student",
         "pk": 5,
         "fields": {
-            "name": "Benjamin Manning",
-            "level": "novice+",
-            "tg_username": "@woman",
-            "discord_username": "choice#7034",
-            "is_far_east": false,
-            "team": null,
+            "name": "Brandi Bowen",
+            "level": "novice",
+            "tg_username": "@seem",
+            "discord_username": "few#6504",
+            "is_far_east": true,
             "time_slot": []
         }
     },
@@ -68,12 +63,11 @@
         "model": "team_creator.student",
         "pk": 6,
         "fields": {
-            "name": "Melinda Fritz PhD",
-            "level": "junior",
-            "tg_username": "@million",
-            "discord_username": "class#2348",
+            "name": "Barbara Gilbert",
+            "level": "novice+",
+            "tg_username": "@truth",
+            "discord_username": "possible#5782",
             "is_far_east": true,
-            "team": null,
             "time_slot": []
         }
     },
@@ -81,12 +75,11 @@
         "model": "team_creator.student",
         "pk": 7,
         "fields": {
-            "name": "John Smith",
-            "level": "junior",
-            "tg_username": "@serious",
-            "discord_username": "reveal#9621",
-            "is_far_east": false,
-            "team": null,
+            "name": "Elizabeth Howard",
+            "level": "novice+",
+            "tg_username": "@I",
+            "discord_username": "buy#6739",
+            "is_far_east": true,
             "time_slot": []
         }
     },
@@ -94,12 +87,11 @@
         "model": "team_creator.student",
         "pk": 8,
         "fields": {
-            "name": "Walter Harrell",
-            "level": "junior",
-            "tg_username": "@another",
-            "discord_username": "do#6040",
+            "name": "Abigail Christensen",
+            "level": "novice+",
+            "tg_username": "@must",
+            "discord_username": "memory#4023",
             "is_far_east": true,
-            "team": null,
             "time_slot": []
         }
     },
@@ -107,12 +99,11 @@
         "model": "team_creator.student",
         "pk": 9,
         "fields": {
-            "name": "Meghan Campbell",
-            "level": "novice+",
-            "tg_username": "@throw",
-            "discord_username": "century#7517",
+            "name": "Mrs. Savannah Mcmillan",
+            "level": "novice",
+            "tg_username": "@share",
+            "discord_username": "partner#8067",
             "is_far_east": false,
-            "team": null,
             "time_slot": []
         }
     },
@@ -120,12 +111,11 @@
         "model": "team_creator.student",
         "pk": 10,
         "fields": {
-            "name": "Michele Franklin",
-            "level": "novice",
-            "tg_username": "@for",
-            "discord_username": "start#7428",
+            "name": "Allen Ritter",
+            "level": "novice+",
+            "tg_username": "@will",
+            "discord_username": "hit#9772",
             "is_far_east": false,
-            "team": null,
             "time_slot": []
         }
     },
@@ -133,12 +123,11 @@
         "model": "team_creator.student",
         "pk": 11,
         "fields": {
-            "name": "Kristen Montes",
-            "level": "junior",
-            "tg_username": "@international",
-            "discord_username": "let#8909",
+            "name": "Elizabeth Mccoy",
+            "level": "novice+",
+            "tg_username": "@concern",
+            "discord_username": "dream#8212",
             "is_far_east": false,
-            "team": null,
             "time_slot": []
         }
     },
@@ -146,12 +135,11 @@
         "model": "team_creator.student",
         "pk": 12,
         "fields": {
-            "name": "Alexandra Massey",
+            "name": "Karen Robinson MD",
             "level": "novice",
-            "tg_username": "@condition",
-            "discord_username": "bed#3557",
-            "is_far_east": false,
-            "team": null,
+            "tg_username": "@someone",
+            "discord_username": "against#8363",
+            "is_far_east": true,
             "time_slot": []
         }
     },
@@ -159,12 +147,11 @@
         "model": "team_creator.student",
         "pk": 13,
         "fields": {
-            "name": "Anthony Wilkinson",
-            "level": "novice",
-            "tg_username": "@month",
-            "discord_username": "unit#8550",
-            "is_far_east": false,
-            "team": null,
+            "name": "Raymond Taylor",
+            "level": "novice+",
+            "tg_username": "@remain",
+            "discord_username": "against#5946",
+            "is_far_east": true,
             "time_slot": []
         }
     },
@@ -172,12 +159,11 @@
         "model": "team_creator.student",
         "pk": 14,
         "fields": {
-            "name": "Sarah Evans",
-            "level": "junior",
-            "tg_username": "@Congress",
-            "discord_username": "sport#5607",
-            "is_far_east": false,
-            "team": null,
+            "name": "Kelly Austin",
+            "level": "novice",
+            "tg_username": "@country",
+            "discord_username": "far#4392",
+            "is_far_east": true,
             "time_slot": []
         }
     },
@@ -185,12 +171,11 @@
         "model": "team_creator.student",
         "pk": 15,
         "fields": {
-            "name": "Rachel May",
-            "level": "junior",
-            "tg_username": "@anything",
-            "discord_username": "difference#2679",
+            "name": "Juan Smith",
+            "level": "novice",
+            "tg_username": "@west",
+            "discord_username": "too#5370",
             "is_far_east": false,
-            "team": null,
             "time_slot": []
         }
     },
@@ -198,12 +183,11 @@
         "model": "team_creator.student",
         "pk": 16,
         "fields": {
-            "name": "Stacey Adams",
+            "name": "Matthew Clark PhD",
             "level": "novice",
-            "tg_username": "@expert",
-            "discord_username": "sing#5583",
+            "tg_username": "@beyond",
+            "discord_username": "his#8147",
             "is_far_east": true,
-            "team": null,
             "time_slot": []
         }
     },
@@ -211,12 +195,11 @@
         "model": "team_creator.student",
         "pk": 17,
         "fields": {
-            "name": "Maurice Schultz",
-            "level": "novice",
-            "tg_username": "@show",
-            "discord_username": "your#5484",
-            "is_far_east": true,
-            "team": null,
+            "name": "David Brown",
+            "level": "junior",
+            "tg_username": "@past",
+            "discord_username": "often#9466",
+            "is_far_east": false,
             "time_slot": []
         }
     },
@@ -224,12 +207,11 @@
         "model": "team_creator.student",
         "pk": 18,
         "fields": {
-            "name": "Heather Williams",
-            "level": "novice",
-            "tg_username": "@chair",
-            "discord_username": "recognize#4221",
+            "name": "Linda Fry",
+            "level": "junior",
+            "tg_username": "@present",
+            "discord_username": "both#3131",
             "is_far_east": true,
-            "team": null,
             "time_slot": []
         }
     },
@@ -237,12 +219,11 @@
         "model": "team_creator.student",
         "pk": 19,
         "fields": {
-            "name": "Michael Kelly",
-            "level": "novice",
-            "tg_username": "@fine",
-            "discord_username": "allow#7280",
+            "name": "Dustin Hurst",
+            "level": "junior",
+            "tg_username": "@get",
+            "discord_username": "whom#6188",
             "is_far_east": true,
-            "team": null,
             "time_slot": []
         }
     },
@@ -250,12 +231,11 @@
         "model": "team_creator.student",
         "pk": 20,
         "fields": {
-            "name": "Blake Long",
-            "level": "novice",
-            "tg_username": "@carry",
-            "discord_username": "clear#8911",
+            "name": "Stephanie Roberts",
+            "level": "junior",
+            "tg_username": "@wonder",
+            "discord_username": "now#8496",
             "is_far_east": true,
-            "team": null,
             "time_slot": []
         }
     },
@@ -263,12 +243,11 @@
         "model": "team_creator.student",
         "pk": 21,
         "fields": {
-            "name": "Nicholas Nunez",
-            "level": "novice+",
-            "tg_username": "@level",
-            "discord_username": "fear#2113",
-            "is_far_east": true,
-            "team": null,
+            "name": "Denise Rojas",
+            "level": "junior",
+            "tg_username": "@throw",
+            "discord_username": "report#5018",
+            "is_far_east": false,
             "time_slot": []
         }
     },
@@ -276,12 +255,11 @@
         "model": "team_creator.student",
         "pk": 22,
         "fields": {
-            "name": "Rhonda Sloan",
-            "level": "junior",
-            "tg_username": "@green",
-            "discord_username": "eye#2207",
-            "is_far_east": false,
-            "team": null,
+            "name": "Charles Bell",
+            "level": "novice",
+            "tg_username": "@walk",
+            "discord_username": "then#4573",
+            "is_far_east": true,
             "time_slot": []
         }
     },
@@ -289,12 +267,11 @@
         "model": "team_creator.student",
         "pk": 23,
         "fields": {
-            "name": "Michael Heath",
-            "level": "novice",
-            "tg_username": "@participant",
-            "discord_username": "at#5523",
+            "name": "Michael Silva",
+            "level": "novice+",
+            "tg_username": "@what",
+            "discord_username": "new#2965",
             "is_far_east": true,
-            "team": null,
             "time_slot": []
         }
     },
@@ -302,12 +279,11 @@
         "model": "team_creator.student",
         "pk": 24,
         "fields": {
-            "name": "Caitlin Rivas",
-            "level": "novice",
-            "tg_username": "@opportunity",
-            "discord_username": "dinner#9541",
-            "is_far_east": false,
-            "team": null,
+            "name": "Samantha Carroll",
+            "level": "junior",
+            "tg_username": "@site",
+            "discord_username": "real#5188",
+            "is_far_east": true,
             "time_slot": []
         }
     },
@@ -315,12 +291,11 @@
         "model": "team_creator.student",
         "pk": 25,
         "fields": {
-            "name": "Sarah Lewis",
-            "level": "novice",
-            "tg_username": "@indeed",
-            "discord_username": "to#8877",
+            "name": "Casey Kelley",
+            "level": "novice+",
+            "tg_username": "@light",
+            "discord_username": "movie#5386",
             "is_far_east": true,
-            "team": null,
             "time_slot": []
         }
     },
@@ -328,12 +303,11 @@
         "model": "team_creator.student",
         "pk": 26,
         "fields": {
-            "name": "Erin Rojas",
+            "name": "Courtney Garcia",
             "level": "junior",
-            "tg_username": "@day",
-            "discord_username": "space#7332",
+            "tg_username": "@today",
+            "discord_username": "plan#6533",
             "is_far_east": false,
-            "team": null,
             "time_slot": []
         }
     },
@@ -341,12 +315,11 @@
         "model": "team_creator.student",
         "pk": 27,
         "fields": {
-            "name": "Rodney Roth",
+            "name": "Rebecca Robinson",
             "level": "novice+",
-            "tg_username": "@option",
-            "discord_username": "person#9638",
+            "tg_username": "@place",
+            "discord_username": "arm#1588",
             "is_far_east": true,
-            "team": null,
             "time_slot": []
         }
     },
@@ -354,12 +327,11 @@
         "model": "team_creator.student",
         "pk": 28,
         "fields": {
-            "name": "Lynn Webb",
+            "name": "Scott Hatfield",
             "level": "novice+",
-            "tg_username": "@community",
-            "discord_username": "board#5319",
+            "tg_username": "@carry",
+            "discord_username": "most#8864",
             "is_far_east": true,
-            "team": null,
             "time_slot": []
         }
     },
@@ -367,12 +339,11 @@
         "model": "team_creator.student",
         "pk": 29,
         "fields": {
-            "name": "Andrea Molina",
-            "level": "novice",
-            "tg_username": "@fact",
-            "discord_username": "fill#5661",
-            "is_far_east": false,
-            "team": null,
+            "name": "Carolyn Jacobs",
+            "level": "novice+",
+            "tg_username": "@draw",
+            "discord_username": "remember#4147",
+            "is_far_east": true,
             "time_slot": []
         }
     },
@@ -380,12 +351,11 @@
         "model": "team_creator.student",
         "pk": 30,
         "fields": {
-            "name": "Justin Mendoza",
+            "name": "Cory Jones",
             "level": "novice+",
-            "tg_username": "@hospital",
-            "discord_username": "alone#9010",
+            "tg_username": "@open",
+            "discord_username": "event#8222",
             "is_far_east": true,
-            "team": null,
             "time_slot": []
         }
     },
@@ -393,12 +363,11 @@
         "model": "team_creator.student",
         "pk": 31,
         "fields": {
-            "name": "Andrea Wagner",
+            "name": "Joseph Taylor",
             "level": "novice+",
-            "tg_username": "@whatever",
-            "discord_username": "public#6156",
+            "tg_username": "@can",
+            "discord_username": "conference#2586",
             "is_far_east": true,
-            "team": null,
             "time_slot": []
         }
     },
@@ -406,12 +375,11 @@
         "model": "team_creator.student",
         "pk": 32,
         "fields": {
-            "name": "Crystal Luna",
+            "name": "Michael Warner",
             "level": "novice",
-            "tg_username": "@Congress",
-            "discord_username": "or#9161",
-            "is_far_east": false,
-            "team": null,
+            "tg_username": "@half",
+            "discord_username": "officer#6300",
+            "is_far_east": true,
             "time_slot": []
         }
     },
@@ -419,12 +387,11 @@
         "model": "team_creator.student",
         "pk": 33,
         "fields": {
-            "name": "Joseph Marsh",
-            "level": "novice+",
-            "tg_username": "@they",
-            "discord_username": "ground#6222",
+            "name": "Elizabeth Turner",
+            "level": "junior",
+            "tg_username": "@ago",
+            "discord_username": "argue#8493",
             "is_far_east": false,
-            "team": null,
             "time_slot": []
         }
     },
@@ -432,12 +399,11 @@
         "model": "team_creator.student",
         "pk": 34,
         "fields": {
-            "name": "Ruth Ramirez",
-            "level": "junior",
-            "tg_username": "@building",
-            "discord_username": "activity#5781",
-            "is_far_east": true,
-            "team": null,
+            "name": "Tara Soto",
+            "level": "novice+",
+            "tg_username": "@eight",
+            "discord_username": "friend#8337",
+            "is_far_east": false,
             "time_slot": []
         }
     },
@@ -445,12 +411,11 @@
         "model": "team_creator.student",
         "pk": 35,
         "fields": {
-            "name": "Deborah Crawford",
-            "level": "novice",
-            "tg_username": "@include",
-            "discord_username": "involve#4537",
-            "is_far_east": true,
-            "team": null,
+            "name": "Margaret Terrell",
+            "level": "junior",
+            "tg_username": "@how",
+            "discord_username": "listen#1057",
+            "is_far_east": false,
             "time_slot": []
         }
     },
@@ -458,12 +423,11 @@
         "model": "team_creator.student",
         "pk": 36,
         "fields": {
-            "name": "Adam Lee",
-            "level": "novice",
-            "tg_username": "@sort",
-            "discord_username": "onto#4286",
+            "name": "Stacy Boone",
+            "level": "novice+",
+            "tg_username": "@sense",
+            "discord_username": "be#6367",
             "is_far_east": true,
-            "team": null,
             "time_slot": []
         }
     },
@@ -471,12 +435,11 @@
         "model": "team_creator.student",
         "pk": 37,
         "fields": {
-            "name": "Marvin Phillips",
+            "name": "Brianna Davies",
             "level": "novice+",
-            "tg_username": "@be",
-            "discord_username": "body#7171",
+            "tg_username": "@yourself",
+            "discord_username": "position#9504",
             "is_far_east": false,
-            "team": null,
             "time_slot": []
         }
     },
@@ -484,12 +447,11 @@
         "model": "team_creator.student",
         "pk": 38,
         "fields": {
-            "name": "Angela Ward",
-            "level": "junior",
-            "tg_username": "@road",
-            "discord_username": "out#3567",
+            "name": "Jennifer Larson",
+            "level": "novice",
+            "tg_username": "@summer",
+            "discord_username": "ready#3413",
             "is_far_east": false,
-            "team": null,
             "time_slot": []
         }
     },
@@ -497,12 +459,11 @@
         "model": "team_creator.student",
         "pk": 39,
         "fields": {
-            "name": "Anthony Garza",
-            "level": "novice",
-            "tg_username": "@society",
-            "discord_username": "nation#6328",
+            "name": "Rodney Lopez",
+            "level": "novice+",
+            "tg_username": "@describe",
+            "discord_username": "thus#7397",
             "is_far_east": false,
-            "team": null,
             "time_slot": []
         }
     },
@@ -510,12 +471,11 @@
         "model": "team_creator.student",
         "pk": 40,
         "fields": {
-            "name": "Nicholas Hernandez",
-            "level": "novice+",
-            "tg_username": "@into",
-            "discord_username": "art#2840",
-            "is_far_east": false,
-            "team": null,
+            "name": "Emily Mejia PhD",
+            "level": "novice",
+            "tg_username": "@identify",
+            "discord_username": "American#2492",
+            "is_far_east": true,
             "time_slot": []
         }
     },
@@ -523,12 +483,11 @@
         "model": "team_creator.student",
         "pk": 41,
         "fields": {
-            "name": "Maureen Garner",
-            "level": "junior",
-            "tg_username": "@now",
-            "discord_username": "heavy#4678",
+            "name": "John Decker Jr.",
+            "level": "novice+",
+            "tg_username": "@line",
+            "discord_username": "play#3712",
             "is_far_east": true,
-            "team": null,
             "time_slot": []
         }
     },
@@ -536,12 +495,11 @@
         "model": "team_creator.student",
         "pk": 42,
         "fields": {
-            "name": "Rebecca Lamb",
+            "name": "Kathryn Reyes",
             "level": "junior",
-            "tg_username": "@identify",
-            "discord_username": "feeling#2686",
+            "tg_username": "@peace",
+            "discord_username": "goal#4201",
             "is_far_east": false,
-            "team": null,
             "time_slot": []
         }
     },
@@ -549,12 +507,11 @@
         "model": "team_creator.student",
         "pk": 43,
         "fields": {
-            "name": "Keith Hernandez",
-            "level": "novice",
-            "tg_username": "@lawyer",
-            "discord_username": "number#5215",
-            "is_far_east": false,
-            "team": null,
+            "name": "Andrea Ochoa",
+            "level": "junior",
+            "tg_username": "@cup",
+            "discord_username": "great#1960",
+            "is_far_east": true,
             "time_slot": []
         }
     },
@@ -562,12 +519,11 @@
         "model": "team_creator.student",
         "pk": 44,
         "fields": {
-            "name": "James Bass",
+            "name": "James Marquez",
             "level": "novice",
-            "tg_username": "@ahead",
-            "discord_username": "protect#4444",
-            "is_far_east": true,
-            "team": null,
+            "tg_username": "@successful",
+            "discord_username": "even#2566",
+            "is_far_east": false,
             "time_slot": []
         }
     },
@@ -575,12 +531,11 @@
         "model": "team_creator.student",
         "pk": 45,
         "fields": {
-            "name": "Kristine Mullen",
-            "level": "novice",
-            "tg_username": "@course",
-            "discord_username": "popular#2435",
+            "name": "Carrie Nelson MD",
+            "level": "junior",
+            "tg_username": "@idea",
+            "discord_username": "several#7764",
             "is_far_east": false,
-            "team": null,
             "time_slot": []
         }
     },
@@ -588,12 +543,11 @@
         "model": "team_creator.student",
         "pk": 46,
         "fields": {
-            "name": "David Berry",
+            "name": "Stacy Green",
             "level": "novice+",
-            "tg_username": "@party",
-            "discord_username": "across#9349",
+            "tg_username": "@into",
+            "discord_username": "girl#8985",
             "is_far_east": false,
-            "team": null,
             "time_slot": []
         }
     },
@@ -601,12 +555,11 @@
         "model": "team_creator.student",
         "pk": 47,
         "fields": {
-            "name": "Julia Smith",
-            "level": "novice+",
-            "tg_username": "@final",
-            "discord_username": "idea#8685",
-            "is_far_east": true,
-            "team": null,
+            "name": "Marissa Suarez",
+            "level": "novice",
+            "tg_username": "@seek",
+            "discord_username": "right#3031",
+            "is_far_east": false,
             "time_slot": []
         }
     },
@@ -614,12 +567,11 @@
         "model": "team_creator.student",
         "pk": 48,
         "fields": {
-            "name": "Michael Hunt",
+            "name": "Christopher Coffey",
             "level": "novice",
-            "tg_username": "@increase",
-            "discord_username": "often#3282",
-            "is_far_east": false,
-            "team": null,
+            "tg_username": "@return",
+            "discord_username": "control#6716",
+            "is_far_east": true,
             "time_slot": []
         }
     },
@@ -627,12 +579,11 @@
         "model": "team_creator.student",
         "pk": 49,
         "fields": {
-            "name": "Jermaine Barker",
-            "level": "novice",
-            "tg_username": "@treat",
-            "discord_username": "season#9906",
-            "is_far_east": false,
-            "team": null,
+            "name": "James Hill",
+            "level": "junior",
+            "tg_username": "@consider",
+            "discord_username": "finish#4826",
+            "is_far_east": true,
             "time_slot": []
         }
     },
@@ -640,12 +591,11 @@
         "model": "team_creator.student",
         "pk": 50,
         "fields": {
-            "name": "Corey Kaufman",
-            "level": "junior",
-            "tg_username": "@third",
-            "discord_username": "defense#8870",
-            "is_far_east": true,
-            "team": null,
+            "name": "Amanda Guzman",
+            "level": "novice",
+            "tg_username": "@trial",
+            "discord_username": "woman#3419",
+            "is_far_east": false,
             "time_slot": []
         }
     }

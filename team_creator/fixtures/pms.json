@@ -3,9 +3,9 @@
         "model": "team_creator.pm",
         "pk": 1,
         "fields": {
-            "name": "Susan Armstrong",
-            "tg_username": "@source_down",
-            "discord_username": "@bar#1234",
+            "name": "Joanne James",
+            "tg_username": "@cell_sister",
+            "discord_username": "@hundred#1234",
             "time_slots": []
         }
     },
@@ -13,9 +13,9 @@
         "model": "team_creator.pm",
         "pk": 2,
         "fields": {
-            "name": "Tammy Morris",
-            "tg_username": "@customer_discussion",
-            "discord_username": "@drug#1234",
+            "name": "Theresa Fernandez",
+            "tg_username": "@of_life",
+            "discord_username": "@likely#1234",
             "time_slots": []
         }
     }

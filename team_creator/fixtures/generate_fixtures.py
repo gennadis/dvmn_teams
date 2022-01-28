@@ -61,9 +61,6 @@ def generate_pm_json(filename: str, count: int, fake: Faker) -> str:
                     "name": fake.name(),
                     "tg_username": f"@{fake.word()}_{fake.word()}",
                     "discord_username": f"@{fake.word()}#1234",
-                    # "time_slots": random.sample(
-                    #     range(1, TIMESLOTS_TOTAL), k=PM_TOTAL_TIMESLOTS
-                    # ),
                     "time_slots": [],
                 },
             }
@@ -79,14 +76,18 @@ def generate_teams_json(filename: str, count: int):
             {
                 "model": "team_creator.team",
                 "pk": i,
-                "fields": {"pm": None, "time_slot": None},
+                "fields": {
+                    "pm": None,
+                    "time_slot": None,
+                    "students": [],
+                },
             }
         )
     save_json(teams, filename)
     return filename
 
 
-def generate_sudents_json(filename: str, count: int, fake: Faker) -> str:
+def generate_students_json(filename: str, count: int, fake: Faker) -> str:
     students = []
     for i in range(1, count + 1):
         students.append(
@@ -99,7 +100,6 @@ def generate_sudents_json(filename: str, count: int, fake: Faker) -> str:
                     "tg_username": f"@{fake.word()}",
                     "discord_username": f"{fake.word()}#{random.randint(1_000, 10_000)}",
                     "is_far_east": random.choice([True, False]),
-                    "team": None,
                     "time_slot": [],
                 },
             }
@@ -115,7 +115,7 @@ def main():
     )
     generate_pm_json("./team_creator/fixtures/pms.json", PM_TOTAL_COUNT, fake)
     generate_teams_json("./team_creator/fixtures/teams.json", TEAMS_TOTAL_COUNT)
-    generate_sudents_json(
+    generate_students_json(
         "./team_creator/fixtures/students.json", STUDENTS_TOTAL_COUNT, fake
     )
 
