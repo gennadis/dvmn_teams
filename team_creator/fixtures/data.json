@@ -3,45 +3,233 @@
         "model": "team_creator.timeslot",
         "pk": 1,
         "fields": {
-            "time_slot": "18:00 - 18:30"
+            "time_slot": "8:00 - 8:30"
         }
     },
     {
         "model": "team_creator.timeslot",
         "pk": 2,
         "fields": {
-            "time_slot": "19:00 - 19:30"
+            "time_slot": "8:30 - 9:00"
         }
     },
     {
         "model": "team_creator.timeslot",
         "pk": 3,
         "fields": {
+            "time_slot": "9:00 - 9:30"
+        }
+    },
+    {
+        "model": "team_creator.timeslot",
+        "pk": 4,
+        "fields": {
+            "time_slot": "9:30 - 10:00"
+        }
+    },
+    {
+        "model": "team_creator.timeslot",
+        "pk": 5,
+        "fields": {
             "time_slot": "10:00 - 10:30"
         }
     },
     {
+        "model": "team_creator.timeslot",
+        "pk": 6,
+        "fields": {
+            "time_slot": "10:30 - 11:00"
+        }
+    },
+    {
+        "model": "team_creator.timeslot",
+        "pk": 7,
+        "fields": {
+            "time_slot": "11:00 - 11:30"
+        }
+    },
+    {
+        "model": "team_creator.timeslot",
+        "pk": 8,
+        "fields": {
+            "time_slot": "11:30 - 12:00"
+        }
+    },
+    {
+        "model": "team_creator.timeslot",
+        "pk": 9,
+        "fields": {
+            "time_slot": "12:00 - 12:30"
+        }
+    },
+    {
+        "model": "team_creator.timeslot",
+        "pk": 10,
+        "fields": {
+            "time_slot": "12:30 - 13:00"
+        }
+    },
+    {
+        "model": "team_creator.timeslot",
+        "pk": 11,
+        "fields": {
+            "time_slot": "13:00 - 13:30"
+        }
+    },
+    {
+        "model": "team_creator.timeslot",
+        "pk": 12,
+        "fields": {
+            "time_slot": "13:30 - 14:00"
+        }
+    },
+    {
+        "model": "team_creator.timeslot",
+        "pk": 13,
+        "fields": {
+            "time_slot": "14:00 - 14:30"
+        }
+    },
+    {
+        "model": "team_creator.timeslot",
+        "pk": 14,
+        "fields": {
+            "time_slot": "14:30 - 15:00"
+        }
+    },
+    {
+        "model": "team_creator.timeslot",
+        "pk": 15,
+        "fields": {
+            "time_slot": "15:00 - 15:30"
+        }
+    },
+    {
+        "model": "team_creator.timeslot",
+        "pk": 16,
+        "fields": {
+            "time_slot": "15:30 - 16:00"
+        }
+    },
+    {
+        "model": "team_creator.timeslot",
+        "pk": 17,
+        "fields": {
+            "time_slot": "16:00 - 16:30"
+        }
+    },
+    {
+        "model": "team_creator.timeslot",
+        "pk": 18,
+        "fields": {
+            "time_slot": "16:30 - 17:00"
+        }
+    },
+    {
+        "model": "team_creator.timeslot",
+        "pk": 19,
+        "fields": {
+            "time_slot": "17:00 - 17:30"
+        }
+    },
+    {
+        "model": "team_creator.timeslot",
+        "pk": 20,
+        "fields": {
+            "time_slot": "17:30 - 18:00"
+        }
+    },
+    {
+        "model": "team_creator.timeslot",
+        "pk": 21,
+        "fields": {
+            "time_slot": "18:00 - 18:30"
+        }
+    },
+    {
+        "model": "team_creator.timeslot",
+        "pk": 22,
+        "fields": {
+            "time_slot": "18:30 - 19:00"
+        }
+    },
+    {
+        "model": "team_creator.timeslot",
+        "pk": 23,
+        "fields": {
+            "time_slot": "19:00 - 19:30"
+        }
+    },
+    {
+        "model": "team_creator.timeslot",
+        "pk": 24,
+        "fields": {
+            "time_slot": "19:30 - 20:00"
+        }
+    },
+    {
+        "model": "team_creator.timeslot",
+        "pk": 25,
+        "fields": {
+            "time_slot": "20:00 - 20:30"
+        }
+    },
+    {
+        "model": "team_creator.timeslot",
+        "pk": 26,
+        "fields": {
+            "time_slot": "20:30 - 21:00"
+        }
+    },
+    {
+        "model": "team_creator.timeslot",
+        "pk": 27,
+        "fields": {
+            "time_slot": "21:00 - 21:30"
+        }
+    },
+    {
+        "model": "team_creator.timeslot",
+        "pk": 28,
+        "fields": {
+            "time_slot": "21:30 - 22:00"
+        }
+    },
+    {
         "model": "team_creator.pm",
         "pk": 1,
         "fields": {
-            "name": "Max Fax",
-            "tg_username": "@max_fax",
-            "discord_username": "maxfax#1234",
+            "name": "Susan Armstrong",
+            "tg_username": "@source_down",
+            "discord_username": "@bar#1234",
             "time_slots": [
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28
+            ]
+        }
+    },
+    {
+        "model": "team_creator.pm",
+        "pk": 2,
+        "fields": {
+            "name": "Tammy Morris",
+            "tg_username": "@customer_discussion",
+            "discord_username": "@drug#1234",
+            "time_slots": [
+                1,
                 2,
-                3
-            ]
-        }
-    },
-    {
-        "model": "team_creator.pm",
-        "pk": 2,
-        "fields": {
-            "name": "Henry Miller",
-            "tg_username": "@henry",
-            "discord_username": "henry#3456",
-            "time_slots": [
-                2
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
             ]
         }
     },
@@ -49,49 +237,778 @@
         "model": "team_creator.team",
         "pk": 1,
         "fields": {
-            "pm": 1,
-            "time_slot": 1
+            "pm": null,
+            "time_slot": null
         }
     },
     {
         "model": "team_creator.team",
         "pk": 2,
         "fields": {
-            "pm": 2,
-            "time_slot": 2
+            "pm": null,
+            "time_slot": null
+        }
+    },
+    {
+        "model": "team_creator.team",
+        "pk": 3,
+        "fields": {
+            "pm": null,
+            "time_slot": null
+        }
+    },
+    {
+        "model": "team_creator.team",
+        "pk": 4,
+        "fields": {
+            "pm": null,
+            "time_slot": null
+        }
+    },
+    {
+        "model": "team_creator.team",
+        "pk": 5,
+        "fields": {
+            "pm": null,
+            "time_slot": null
+        }
+    },
+    {
+        "model": "team_creator.team",
+        "pk": 6,
+        "fields": {
+            "pm": null,
+            "time_slot": null
+        }
+    },
+    {
+        "model": "team_creator.team",
+        "pk": 7,
+        "fields": {
+            "pm": null,
+            "time_slot": null
+        }
+    },
+    {
+        "model": "team_creator.team",
+        "pk": 8,
+        "fields": {
+            "pm": null,
+            "time_slot": null
+        }
+    },
+    {
+        "model": "team_creator.team",
+        "pk": 9,
+        "fields": {
+            "pm": null,
+            "time_slot": null
+        }
+    },
+    {
+        "model": "team_creator.team",
+        "pk": 10,
+        "fields": {
+            "pm": null,
+            "time_slot": null
+        }
+    },
+    {
+        "model": "team_creator.team",
+        "pk": 11,
+        "fields": {
+            "pm": null,
+            "time_slot": null
+        }
+    },
+    {
+        "model": "team_creator.team",
+        "pk": 12,
+        "fields": {
+            "pm": null,
+            "time_slot": null
+        }
+    },
+    {
+        "model": "team_creator.team",
+        "pk": 13,
+        "fields": {
+            "pm": null,
+            "time_slot": null
+        }
+    },
+    {
+        "model": "team_creator.team",
+        "pk": 14,
+        "fields": {
+            "pm": null,
+            "time_slot": null
+        }
+    },
+    {
+        "model": "team_creator.team",
+        "pk": 15,
+        "fields": {
+            "pm": null,
+            "time_slot": null
+        }
+    },
+    {
+        "model": "team_creator.team",
+        "pk": 16,
+        "fields": {
+            "pm": null,
+            "time_slot": null
         }
     },
     {
         "model": "team_creator.student",
         "pk": 1,
         "fields": {
-            "name": "Rerere",
+            "name": "Yolanda Richard",
+            "level": "novice",
+            "tg_username": "@source",
+            "discord_username": "large#2471",
+            "is_far_east": true,
+            "team": null,
+            "time_slot": []
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 2,
+        "fields": {
+            "name": "Brian Jordan",
             "level": "junior",
-            "tg_username": "@rerere",
-            "discord_username": "rerere#1212",
+            "tg_username": "@doctor",
+            "discord_username": "benefit#7393",
+            "is_far_east": true,
+            "team": null,
+            "time_slot": []
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 3,
+        "fields": {
+            "name": "Joshua Tran",
+            "level": "novice",
+            "tg_username": "@week",
+            "discord_username": "chance#6116",
+            "is_far_east": true,
+            "team": null,
+            "time_slot": []
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 4,
+        "fields": {
+            "name": "Mr. Philip Hall",
+            "level": "novice+",
+            "tg_username": "@agency",
+            "discord_username": "work#8584",
             "is_far_east": false,
             "team": null,
-            "time_slot": [
-                1,
-                2,
-                3
-            ]
+            "time_slot": []
         }
     },
     {
         "model": "team_creator.student",
-        "pk": 2,
+        "pk": 5,
         "fields": {
-            "name": "Balala",
-            "level": "Novice+",
-            "tg_username": "@kakaka",
-            "discord_username": "kakaka#1231",
+            "name": "Benjamin Manning",
+            "level": "novice+",
+            "tg_username": "@woman",
+            "discord_username": "choice#7034",
+            "is_far_east": false,
+            "team": null,
+            "time_slot": []
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 6,
+        "fields": {
+            "name": "Melinda Fritz PhD",
+            "level": "junior",
+            "tg_username": "@million",
+            "discord_username": "class#2348",
             "is_far_east": true,
-            "team": 1,
-            "time_slot": [
-                1,
-                2
-            ]
+            "team": null,
+            "time_slot": []
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 7,
+        "fields": {
+            "name": "John Smith",
+            "level": "junior",
+            "tg_username": "@serious",
+            "discord_username": "reveal#9621",
+            "is_far_east": false,
+            "team": null,
+            "time_slot": []
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 8,
+        "fields": {
+            "name": "Walter Harrell",
+            "level": "junior",
+            "tg_username": "@another",
+            "discord_username": "do#6040",
+            "is_far_east": true,
+            "team": null,
+            "time_slot": []
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 9,
+        "fields": {
+            "name": "Meghan Campbell",
+            "level": "novice+",
+            "tg_username": "@throw",
+            "discord_username": "century#7517",
+            "is_far_east": false,
+            "team": null,
+            "time_slot": []
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 10,
+        "fields": {
+            "name": "Michele Franklin",
+            "level": "novice",
+            "tg_username": "@for",
+            "discord_username": "start#7428",
+            "is_far_east": false,
+            "team": null,
+            "time_slot": []
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 11,
+        "fields": {
+            "name": "Kristen Montes",
+            "level": "junior",
+            "tg_username": "@international",
+            "discord_username": "let#8909",
+            "is_far_east": false,
+            "team": null,
+            "time_slot": []
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 12,
+        "fields": {
+            "name": "Alexandra Massey",
+            "level": "novice",
+            "tg_username": "@condition",
+            "discord_username": "bed#3557",
+            "is_far_east": false,
+            "team": null,
+            "time_slot": []
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 13,
+        "fields": {
+            "name": "Anthony Wilkinson",
+            "level": "novice",
+            "tg_username": "@month",
+            "discord_username": "unit#8550",
+            "is_far_east": false,
+            "team": null,
+            "time_slot": []
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 14,
+        "fields": {
+            "name": "Sarah Evans",
+            "level": "junior",
+            "tg_username": "@Congress",
+            "discord_username": "sport#5607",
+            "is_far_east": false,
+            "team": null,
+            "time_slot": []
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 15,
+        "fields": {
+            "name": "Rachel May",
+            "level": "junior",
+            "tg_username": "@anything",
+            "discord_username": "difference#2679",
+            "is_far_east": false,
+            "team": null,
+            "time_slot": []
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 16,
+        "fields": {
+            "name": "Stacey Adams",
+            "level": "novice",
+            "tg_username": "@expert",
+            "discord_username": "sing#5583",
+            "is_far_east": true,
+            "team": null,
+            "time_slot": []
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 17,
+        "fields": {
+            "name": "Maurice Schultz",
+            "level": "novice",
+            "tg_username": "@show",
+            "discord_username": "your#5484",
+            "is_far_east": true,
+            "team": null,
+            "time_slot": []
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 18,
+        "fields": {
+            "name": "Heather Williams",
+            "level": "novice",
+            "tg_username": "@chair",
+            "discord_username": "recognize#4221",
+            "is_far_east": true,
+            "team": null,
+            "time_slot": []
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 19,
+        "fields": {
+            "name": "Michael Kelly",
+            "level": "novice",
+            "tg_username": "@fine",
+            "discord_username": "allow#7280",
+            "is_far_east": true,
+            "team": null,
+            "time_slot": []
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 20,
+        "fields": {
+            "name": "Blake Long",
+            "level": "novice",
+            "tg_username": "@carry",
+            "discord_username": "clear#8911",
+            "is_far_east": true,
+            "team": null,
+            "time_slot": []
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 21,
+        "fields": {
+            "name": "Nicholas Nunez",
+            "level": "novice+",
+            "tg_username": "@level",
+            "discord_username": "fear#2113",
+            "is_far_east": true,
+            "team": null,
+            "time_slot": []
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 22,
+        "fields": {
+            "name": "Rhonda Sloan",
+            "level": "junior",
+            "tg_username": "@green",
+            "discord_username": "eye#2207",
+            "is_far_east": false,
+            "team": null,
+            "time_slot": []
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 23,
+        "fields": {
+            "name": "Michael Heath",
+            "level": "novice",
+            "tg_username": "@participant",
+            "discord_username": "at#5523",
+            "is_far_east": true,
+            "team": null,
+            "time_slot": []
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 24,
+        "fields": {
+            "name": "Caitlin Rivas",
+            "level": "novice",
+            "tg_username": "@opportunity",
+            "discord_username": "dinner#9541",
+            "is_far_east": false,
+            "team": null,
+            "time_slot": []
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 25,
+        "fields": {
+            "name": "Sarah Lewis",
+            "level": "novice",
+            "tg_username": "@indeed",
+            "discord_username": "to#8877",
+            "is_far_east": true,
+            "team": null,
+            "time_slot": []
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 26,
+        "fields": {
+            "name": "Erin Rojas",
+            "level": "junior",
+            "tg_username": "@day",
+            "discord_username": "space#7332",
+            "is_far_east": false,
+            "team": null,
+            "time_slot": []
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 27,
+        "fields": {
+            "name": "Rodney Roth",
+            "level": "novice+",
+            "tg_username": "@option",
+            "discord_username": "person#9638",
+            "is_far_east": true,
+            "team": null,
+            "time_slot": []
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 28,
+        "fields": {
+            "name": "Lynn Webb",
+            "level": "novice+",
+            "tg_username": "@community",
+            "discord_username": "board#5319",
+            "is_far_east": true,
+            "team": null,
+            "time_slot": []
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 29,
+        "fields": {
+            "name": "Andrea Molina",
+            "level": "novice",
+            "tg_username": "@fact",
+            "discord_username": "fill#5661",
+            "is_far_east": false,
+            "team": null,
+            "time_slot": []
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 30,
+        "fields": {
+            "name": "Justin Mendoza",
+            "level": "novice+",
+            "tg_username": "@hospital",
+            "discord_username": "alone#9010",
+            "is_far_east": true,
+            "team": null,
+            "time_slot": []
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 31,
+        "fields": {
+            "name": "Andrea Wagner",
+            "level": "novice+",
+            "tg_username": "@whatever",
+            "discord_username": "public#6156",
+            "is_far_east": true,
+            "team": null,
+            "time_slot": []
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 32,
+        "fields": {
+            "name": "Crystal Luna",
+            "level": "novice",
+            "tg_username": "@Congress",
+            "discord_username": "or#9161",
+            "is_far_east": false,
+            "team": null,
+            "time_slot": []
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 33,
+        "fields": {
+            "name": "Joseph Marsh",
+            "level": "novice+",
+            "tg_username": "@they",
+            "discord_username": "ground#6222",
+            "is_far_east": false,
+            "team": null,
+            "time_slot": []
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 34,
+        "fields": {
+            "name": "Ruth Ramirez",
+            "level": "junior",
+            "tg_username": "@building",
+            "discord_username": "activity#5781",
+            "is_far_east": true,
+            "team": null,
+            "time_slot": []
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 35,
+        "fields": {
+            "name": "Deborah Crawford",
+            "level": "novice",
+            "tg_username": "@include",
+            "discord_username": "involve#4537",
+            "is_far_east": true,
+            "team": null,
+            "time_slot": []
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 36,
+        "fields": {
+            "name": "Adam Lee",
+            "level": "novice",
+            "tg_username": "@sort",
+            "discord_username": "onto#4286",
+            "is_far_east": true,
+            "team": null,
+            "time_slot": []
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 37,
+        "fields": {
+            "name": "Marvin Phillips",
+            "level": "novice+",
+            "tg_username": "@be",
+            "discord_username": "body#7171",
+            "is_far_east": false,
+            "team": null,
+            "time_slot": []
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 38,
+        "fields": {
+            "name": "Angela Ward",
+            "level": "junior",
+            "tg_username": "@road",
+            "discord_username": "out#3567",
+            "is_far_east": false,
+            "team": null,
+            "time_slot": []
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 39,
+        "fields": {
+            "name": "Anthony Garza",
+            "level": "novice",
+            "tg_username": "@society",
+            "discord_username": "nation#6328",
+            "is_far_east": false,
+            "team": null,
+            "time_slot": []
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 40,
+        "fields": {
+            "name": "Nicholas Hernandez",
+            "level": "novice+",
+            "tg_username": "@into",
+            "discord_username": "art#2840",
+            "is_far_east": false,
+            "team": null,
+            "time_slot": []
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 41,
+        "fields": {
+            "name": "Maureen Garner",
+            "level": "junior",
+            "tg_username": "@now",
+            "discord_username": "heavy#4678",
+            "is_far_east": true,
+            "team": null,
+            "time_slot": []
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 42,
+        "fields": {
+            "name": "Rebecca Lamb",
+            "level": "junior",
+            "tg_username": "@identify",
+            "discord_username": "feeling#2686",
+            "is_far_east": false,
+            "team": null,
+            "time_slot": []
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 43,
+        "fields": {
+            "name": "Keith Hernandez",
+            "level": "novice",
+            "tg_username": "@lawyer",
+            "discord_username": "number#5215",
+            "is_far_east": false,
+            "team": null,
+            "time_slot": []
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 44,
+        "fields": {
+            "name": "James Bass",
+            "level": "novice",
+            "tg_username": "@ahead",
+            "discord_username": "protect#4444",
+            "is_far_east": true,
+            "team": null,
+            "time_slot": []
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 45,
+        "fields": {
+            "name": "Kristine Mullen",
+            "level": "novice",
+            "tg_username": "@course",
+            "discord_username": "popular#2435",
+            "is_far_east": false,
+            "team": null,
+            "time_slot": []
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 46,
+        "fields": {
+            "name": "David Berry",
+            "level": "novice+",
+            "tg_username": "@party",
+            "discord_username": "across#9349",
+            "is_far_east": false,
+            "team": null,
+            "time_slot": []
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 47,
+        "fields": {
+            "name": "Julia Smith",
+            "level": "novice+",
+            "tg_username": "@final",
+            "discord_username": "idea#8685",
+            "is_far_east": true,
+            "team": null,
+            "time_slot": []
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 48,
+        "fields": {
+            "name": "Michael Hunt",
+            "level": "novice",
+            "tg_username": "@increase",
+            "discord_username": "often#3282",
+            "is_far_east": false,
+            "team": null,
+            "time_slot": []
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 49,
+        "fields": {
+            "name": "Jermaine Barker",
+            "level": "novice",
+            "tg_username": "@treat",
+            "discord_username": "season#9906",
+            "is_far_east": false,
+            "team": null,
+            "time_slot": []
+        }
+    },
+    {
+        "model": "team_creator.student",
+        "pk": 50,
+        "fields": {
+            "name": "Corey Kaufman",
+            "level": "junior",
+            "tg_username": "@third",
+            "discord_username": "defense#8870",
+            "is_far_east": true,
+            "team": null,
+            "time_slot": []
         }
     }
 ]
