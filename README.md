@@ -2,18 +2,7 @@
 
 This project ...
 
-
-----
-1. python manage.py makefakes
-2. python manage.py loaddata students.json pms.json timeslots.json
-3. python manage.py maketeams
-4. open `http://127.0.0.1:8000/teams/`
-
-----
-
-
-[//]: # (Screenshot placeholder ![Screenshot](Screenshot.png) )
-
+Screenshot placeholder ![Screenshot](Screenshot.png)
 
 ## Installation notes
 1. Clone project
@@ -32,12 +21,24 @@ source venv/bin/activate
 ```bash
 pip install -r requirements.txt
 ```
+
 4. Rename `.env.example` to `.env` and fill your secrets in it
 
-5. Run
+5. Create and load fake data in a database if needed
+```bash
+python manage.py makefakes
+python manage.py loaddata students.json pms.json timeslots.json
+```
+
+6. Make empty teams for pms and students
+```bash
+python manage.py maketeams
+```
+
+7. Run server
 ```bash
 python manage.py runserver
 ```
 
 6. Open
-Open site in browser [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+Open app in browser [http://127.0.0.1:8000/teams/](http://127.0.0.1:8000/teams/)
