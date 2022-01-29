@@ -8,7 +8,7 @@ class TimeSlot(models.Model):
     )
 
     def __str__(self):
-        return f"Timeslot {self.timeslot}"
+        return self.timeslot
 
 
 class PM(models.Model):
@@ -23,7 +23,7 @@ class PM(models.Model):
     )
 
     def __str__(self) -> str:
-        return f"PM {self.name}, {self.tg_username}"
+        return f"PM {self.name}"
 
 
 class Student(models.Model):
@@ -42,7 +42,7 @@ class Student(models.Model):
     )
 
     def __str__(self) -> str:
-        return f"Student {self.name}, tg: {self.tg_username}"
+        return f"{self.name}, {self.tg_username}, {self.level}"
 
 
 class Team(models.Model):
@@ -74,4 +74,4 @@ class Team(models.Model):
     )
 
     def __str__(self):
-        return f"Team {self.pk}"
+        return f"Team {self.pk}, {self.pm}, {self.level}, {self.timeslot.timeslot}"
