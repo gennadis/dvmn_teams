@@ -3,20 +3,20 @@
         "model": "team_creator.pm",
         "pk": 1,
         "fields": {
-            "name": "Joanne James",
-            "tg_username": "@cell_sister",
-            "discord_username": "@hundred#1234",
-            "time_slots": []
+            "name": "Michael Perez",
+            "tg_username": "@specific_note",
+            "discord_username": "@effort#1234",
+            "timeslot": []
         }
     },
     {
         "model": "team_creator.pm",
         "pk": 2,
         "fields": {
-            "name": "Theresa Fernandez",
-            "tg_username": "@of_life",
-            "discord_username": "@likely#1234",
-            "time_slots": []
+            "name": "Wayne Wood",
+            "tg_username": "@carry_race",
+            "discord_username": "@he#1234",
+            "timeslot": []
         }
     }
 ]
