@@ -24,21 +24,26 @@ pip install -r requirements.txt
 
 4. Rename `.env.example` to `.env` and fill your secrets in it
 
-5. Create and load fake data in a database if needed
+5. Migrate
+```bash
+python manage.py migrate
+```
+
+6. Create and load fake data in a database if needed
 ```bash
 python manage.py makefakes
 python manage.py loaddata students.json pms.json timeslots.json
 ```
 
-6. Make empty teams for pms and students
+7. Make empty teams for pms and students
 ```bash
 python manage.py maketeams
 ```
 
-7. Run server
+8. Run server
 ```bash
 python manage.py runserver
 ```
 
-6. Open
+9. Open
 Open app in browser [http://127.0.0.1:8000/teams/](http://127.0.0.1:8000/teams/)
