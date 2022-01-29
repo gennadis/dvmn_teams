@@ -2,6 +2,16 @@
 
 This project ...
 
+
+----
+1. python manage.py makefakes
+2. python manage.py loaddata students.json pms.json timeslots.json
+3. python manage.py maketeams
+4. enjoy
+
+----
+
+
 [//]: # (Screenshot placeholder ![Screenshot](Screenshot.png) )
 
 
