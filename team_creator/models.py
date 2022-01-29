@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.validators import MaxValueValidator, MinValueValidator
 
 
 class TimeSlot(models.Model):
@@ -40,6 +41,7 @@ class Student(models.Model):
         related_name="Students",
         blank=True,
     )
+    in_team = models.BooleanField(verbose_name="Studetn already in team", default=False)
 
     def __str__(self) -> str:
         return f"Student {self.name}, tg: {self.tg_username}"
@@ -67,6 +69,18 @@ class Team(models.Model):
         verbose_name="Team students",
         related_name="Students",
         blank=True,
+    )
+    counter = models.IntegerField(
+        verbose_name="Students in Team",
+        validators=[
+            MinValueValidator(0),
+            MaxValueValidator(3),
+        ],
+        default=0,
+    )
+    level = models.CharField(
+        verbose_name="Level",
+        max_length=200,
     )
 
     def __str__(self):
