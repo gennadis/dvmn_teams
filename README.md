@@ -7,7 +7,7 @@ This project ...
 1. python manage.py makefakes
 2. python manage.py loaddata students.json pms.json timeslots.json
 3. python manage.py maketeams
-4. enjoy
+4. open `http://127.0.0.1:8000/teams/`
 
 ----
 
