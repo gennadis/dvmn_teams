@@ -43,6 +43,7 @@ python manage.py maketeams
 8. Run server
 ```bash
 python manage.py runserver
+python manage.py telebot
 ```
 
 9. Open
