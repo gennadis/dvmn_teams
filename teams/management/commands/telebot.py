@@ -1,8 +1,3 @@
-import random
-from collections import Counter
-from math import remainder
-from typing import Generator
-
 from django.core.management.base import BaseCommand
 from teams.models import TimeSlot, Student, PM, Team
 from django.db.models import Count
