@@ -15,7 +15,7 @@ def get_populated_teams():
         print(
             team.id,
             team.level,
-            team.time_slot.time_slot,
+            team.timeslot.timeslot,
             [s.name for s in team.students.all()],
         )
 
@@ -41,7 +41,7 @@ class Command(BaseCommand):
 
         # get available timeslots
         timeslots = [
-            (team.time_slot.pk, team.pm.name, team.time_slot.time_slot)
+            (team.timeslot.pk, team.pm.name, team.timeslot.timeslot)
             for team in available_teams
         ]
         print(f"Available teams timeslots: {timeslots}")
@@ -50,7 +50,7 @@ class Command(BaseCommand):
         users_ts_choice = input("Choose timeslot primary key ")
 
         # get first team that fits by timeslot - from available teams
-        users_team = available_teams.filter(time_slot=users_ts_choice).first()
+        users_team = available_teams.filter(timeslot=users_ts_choice).first()
         print(f"Your team ID is {users_team}")
 
         # add student to team and save
@@ -68,13 +68,3 @@ class Command(BaseCommand):
         print("#" * 50)
         print("ALL TEAMS")
         get_populated_teams()
-
-        # print(generate_level())
-        # add_empty_teams()
-        # teams = [team.level for team in Team.objects.all()]
-        # student_levels = [s.level for s in Student.objects.all()]
-        # counter = dict(Counter(student_levels))
-        # for level, num in counter.items():
-        #     counter[level] = count_divmod_three(num)
-        # print(counter)
-        # print(Counter(teams))
