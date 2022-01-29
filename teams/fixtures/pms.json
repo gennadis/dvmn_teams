@@ -1,0 +1,22 @@
+[
+    {
+        "model": "teams.pm",
+        "pk": 1,
+        "fields": {
+            "name": "Rachel Cook",
+            "tg_username": "@task_somebody",
+            "discord_username": "@factor#1234",
+            "timeslot": []
+        }
+    },
+    {
+        "model": "teams.pm",
+        "pk": 2,
+        "fields": {
+            "name": "David Young",
+            "tg_username": "@under_meet",
+            "discord_username": "@hotel#1234",
+            "timeslot": []
+        }
+    }
+]

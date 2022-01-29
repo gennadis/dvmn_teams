@@ -1,0 +1,14 @@
+<form action="{% url 'teams:detail' student.id %}" method="post">
+    {% csrf_token %}
+    <fieldset>
+        <legend>
+            <h1>{{ student.name }}</h1>
+        </legend>
+        {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+        {% for time_slot in student.time_slot.all %}
+        <input type="checkbox" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
+        <label for="choice{{ forloop.counter }}">{{ time_slot.time_slot }}</label><br>
+        {% endfor %}
+    </fieldset>
+    <input type="submit" value="Submit">
+</form>
