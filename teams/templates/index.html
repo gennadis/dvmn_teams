@@ -9,7 +9,7 @@
   <ul>
     {% for team in populated_teams %}
     <h2># Team ID {{ team.id }}: level: {{ team.level }}, timeslot: {{ team.timeslot.timeslot }}, students: {{
-      team.students }}</h2>
+      team.students.all|join:", " }}</h2>
     {% endfor %}
   </ul>
 
