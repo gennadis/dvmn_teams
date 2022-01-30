@@ -8,8 +8,9 @@
   <h1>Dvmn Teams</h1>
   <ul>
     {% for team in populated_teams %}
-    <a># Team ID {{ team.id }}: level: {{ team.level }}, timeslot: {{ team.timeslot.timeslot }}, students: {{
-      team.students.all|join:", " }} </a>
+    <a># Team ID: {{ team.id }}, PM: {{ team.pm.name }}, level: {{ team.level }},
+      timeslot: {{ team.timeslot.timeslot }}, students in team: {{ team.students.all|length }} </a>
+    <br>
     {% endfor %}
   </ul>
 
