@@ -2,7 +2,7 @@
 
 This project ...
 
-[Screenshot](Screenshot.png)
+![Screenshot](Screenshot.png)
 
 ## Installation notes
 1. Clone project
