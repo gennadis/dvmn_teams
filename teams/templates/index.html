@@ -7,7 +7,10 @@
 <body>
   <h1>Dvmn Teams</h1>
   <ul>
-    <li><strong>Teams:</strong> {{ populated_teams }} </li>
+    {% for team in populated_teams %}
+    <h2># Team ID {{ team.id }}: level: {{ team.level }}, timeslot: {{ team.timeslot.timeslot }}, students: {{
+      team.students }}</h2>
+    {% endfor %}
   </ul>
 
 </body>
