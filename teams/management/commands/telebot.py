@@ -53,10 +53,20 @@ def gen_markup_pm():
 
 @bot.message_handler(commands=["start"])
 def start_message(message):
-    bot.send_message(
-        message.chat.id,
-        f"Привет, я бот который поможет тебе записаться на проекты Devman, я подберу тебе подходящее время веди команду /enroll",
-    )
+    tg_username = f"@{message.chat.username}"
+
+    try:
+        student = Student.objects.get(tg_username=tg_username)
+
+        bot.send_message(
+            message.chat.id,
+            f"Привет, {student.name} я бот который поможет тебе записаться на проекты Devman, я подберу тебе подходящее время веди команду /enroll",
+        )
+    except:
+        bot.send_message(
+            message.chat.id,
+            "Уходи.",
+        )
 
 
 @bot.message_handler(commands=["enroll"])
