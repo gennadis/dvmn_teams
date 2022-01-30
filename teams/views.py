@@ -1,6 +1,31 @@
+from django.shortcuts import render
 from django.http import HttpResponse
+from django.db.models import Count
+
+from .models import PM, TimeSlot, Student, Team
 
 
 def index(request):
-    html = '<iframe width="560" height="315" src="https://www.youtube.com/embed/532j-186xEQ?start=30" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
-    return HttpResponse(html)
+    """View function for home page of site."""
+
+    populated_teams = (
+        Team.objects.annotate(students_in_team=Count("students"))
+        .filter(
+            students_in_team__gt=0,
+        )
+        .all()
+    )
+    # for team in populated_teams:
+    #     print(
+    #         team.id,
+    #         team.level,
+    #         team.timeslot.timeslot,
+    #         [s.name for s in team.students.all()],
+    #     )
+
+    context = {
+        "populated_teams": populated_teams,
+    }
+
+    # Render the HTML template index.html with the data in the context variable
+    return render(request, "index.html", context=context)
