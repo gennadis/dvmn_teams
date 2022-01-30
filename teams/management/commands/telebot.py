@@ -68,3 +68,108 @@ class Command(BaseCommand):
         print("#" * 50)
         print("ALL TEAMS")
         get_populated_teams()
+
+
+
+
+
+
+
+import telebot
+import config
+import json
+import logging
+
+
+from telebot import types
+from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
+
+bot = telebot.TeleBot(config.token)
+#
+# logger = telebot.logger
+# telebot.logger.setLevel(logging.DEBUG)
+
+print(bot.get_me())
+
+
+def check_user(user):
+    if user:
+        print(f'@{user}')
+
+def gen_markup_time_pm1():
+    markup = InlineKeyboardMarkup()
+    markup.row_width = 4
+    button_list = [InlineKeyboardButton(f"{values}", callback_data=f"{key}") for key, values in time_slot_pm1.items()]
+    markup.add(*button_list)
+    return markup
+
+
+def gen_markup_time_pm2():
+    markup = InlineKeyboardMarkup()
+    markup.row_width = 4
+    button_list = [InlineKeyboardButton(f"{i}", callback_data=f"{i}") for i in time_slot_pm2]
+    print(button_list)
+    markup.add(*button_list)
+    return markup
+
+def gen_markup_pm():
+    markup = InlineKeyboardMarkup()
+    markup.row_width = 2
+    markup.add(
+        InlineKeyboardButton('Да', callback_data='yes'),
+        InlineKeyboardButton('Нет', callback_data='no')
+    )
+    return markup
+
+@bot.message_handler(commands=['start'])
+def start_message(message):
+    bot.send_message(message.chat.id,'Привет я бот который поможет тебе записаться на проекты Devman, я подберу тебе подходящее время веди команду /enroll')
+    user = message.chat.username
+    check_user(user)
+
+@bot.message_handler(commands=['enroll'])
+def start(message):
+    bot.send_message(message.chat.id, "Готов записаться на проект?", reply_markup=gen_markup_pm())
+
+
+
+
+@bot.callback_query_handler(func=lambda call: True )
+def callback_query(call):
+    if call.data == "yes":
+        bot.send_message(call.message.chat.id, "У ПМов есть следующее свободное время, выбирай", reply_markup=gen_markup_time_pm1())
+    elif call.data == "no":
+        bot.send_message(call.message.chat.id, "Заходи когда будет удобно введи /start и подтверди выбор", reply_markup=None)
+    else:
+        bot.edit_message_text(chat_id=call.message.chat.id, message_id=call.message.message_id,
+                              text="Спасибо за выбор",
+                              reply_markup=None)
+        call.data = идентификатор
+
+
+        
+        bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                  text='Ты успешно записан на выбранное время')
+
+
+@bot.message_handler(commands=['help'])
+def start(message):
+    bot.send_message(message.chat.id, "просто введи /enroll")
+
+
+if __name__ == '__main__':
+    end_time = 0;
+    time_slot_pm1 = []
+    time_slot_pm2 = []
+    with open('pms.json', 'r', encoding='utf-8') as f:
+        text = json.load(f)
+        for info_pm in text:
+            if info_pm['pk'] == 1:
+                time_slot_pm1 = ((info_pm['fields']['time_slots']))
+
+            elif info_pm['pk'] == 2:
+                time_slot_pm2 = ((info_pm['fields']['time_slots']))
+
+    bot.enable_save_next_step_handlers(delay=5)
+    bot.load_next_step_handlers()
+    bot.infinity_polling()
