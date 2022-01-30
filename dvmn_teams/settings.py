@@ -32,7 +32,7 @@ SECRET_KEY = os.environ["DJANGO_SECRET_KEY"]
 DEBUG = True
 
 ALLOWED_HOSTS = [".herokuapp.com", "127.0.0.1"]
-
+CSRF_TRUSTED_ORIGINS = ["https://*.herokuapp.com", "https://*.127.0.0.1"]
 
 # Application definition
 
