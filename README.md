@@ -26,19 +26,24 @@ pip install -r requirements.txt
 4. Rename `.env.example` to `.env` and fill your secrets in it.
 Important! Place `.env` in `dvmn_teams` folder.
 
-5. Migrate
+5. Create Django superuser
+```bash
+python manage.py createsuperuser
+```
+
+6. Migrate
 ```bash
 python manage.py migrate
 ```
 
-6. Create and import fake fixtures if needed.  
+7. Create and import fake fixtures if needed.  
 50 students and 2 PM will be generated and added to a database.
 ```bash
 python manage.py makefakes
 python manage.py loaddata students.json pms.json timeslots.json
 ```
 
-7. Make empty teams for PMs and students.
+8. Make empty teams for PMs and students.
 Generated teams will contain:  
 - PM
 - Timeslot
@@ -48,11 +53,15 @@ Generated teams will contain:
 python manage.py maketeams
 ```
 
-8. Run web server and telegram bot
+9. Run gunicorn web server
 ```bash
 gunicorn dvmn_teams.wsgi
+```
+
+10. Run telegram bot
+```bash
 python manage.py telebot
 ```
 
-9. Open admin panel
+11. Open admin panel
 Open app in browser [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/)
