@@ -70,55 +70,60 @@ def gen_markup_time_pm1(timeslots: list[tuple]):
 def callback_query(call):
     tg_username = f"@{call.message.chat.username}"
     student = Student.objects.get(tg_username=tg_username)
-
-    available_teams = (
-        Team.objects.annotate(students_in_team=Count("students"))
-        .filter(
-            level=student.level,
-            students_in_team__lt=3,
-        )
-        .all()
-    )
-
-    timeslots = [
-        (team.timeslot.pk, team.pm.name, team.timeslot.timeslot)
-        for team in available_teams
-    ]
-
-    if call.data == "yes":
-        bot.send_message(
-            call.message.chat.id,
-            "Выбери продакт менеджера и удобное время для ежедневного созвона с командой",
-            reply_markup=gen_markup_time_pm1(timeslots),
-        )
-    elif call.data == "no":
-        bot.send_message(
-            call.message.chat.id,
-            "Когда будешь готов - введи /start",
-            reply_markup=None,
+    if not student.in_team:
+        available_teams = (
+            Team.objects.annotate(students_in_team=Count("students"))
+            .filter(
+                level=student.level,
+                students_in_team__lt=3,
+            )
+            .all()
         )
 
+        timeslots = [
+            (team.timeslot.pk, team.pm.name, team.timeslot.timeslot)
+            for team in available_teams
+        ]
+
+        if call.data == "yes":
+            bot.send_message(
+                call.message.chat.id,
+                "Выбери продакт менеджера и удобное время для ежедневного созвона с командой",
+                reply_markup=gen_markup_time_pm1(timeslots),
+            )
+        elif call.data == "no":
+            bot.send_message(
+                call.message.chat.id,
+                "Когда будешь готов - введи /start",
+                reply_markup=None,
+            )
+
+        else:
+            users_timeslot_pick = call.data
+
+            users_team = available_teams.filter(timeslot=users_timeslot_pick).first()
+            users_team.students.add(student)
+            users_team.save()
+            student.in_team = True
+            # student.timeslot = users_timeslot_pick
+            student.save()
+
+            bot.edit_message_text(
+                chat_id=call.message.chat.id,
+                message_id=call.message.message_id,
+                text=f"Отлично!\nТы записан к {users_team.pm}: {users_team.pm.tg_username} на {users_team.timeslot.timeslot}.\nСтуденты в твоей команде:\n{', '.join([f'{student.name}: {student.tg_username}' for student in users_team.students.all()])}",
+                reply_markup=None,
+            )
+            # bot.answer_callback_query(
+            #     callback_query_id=call.id,
+            #     show_alert=True,
+            #     text=f"Ты успешно записан на выбранное время, your team ID {users_team}, your team PM {users_team.pm} Students in your team: {[student.name for student in users_team.students.all()]}",
+            # )
     else:
-        users_timeslot_pick = call.data
-
-        users_team = available_teams.filter(timeslot=users_timeslot_pick).first()
-        users_team.students.add(student)
-        users_team.save()
-        student.in_team = True
-        # student.timeslot = users_timeslot_pick
-        student.save()
-
-        bot.edit_message_text(
-            chat_id=call.message.chat.id,
-            message_id=call.message.message_id,
-            text=f"Отлично!\nТы записан к {users_team.pm}: {users_team.pm.tg_username} на {users_team.timeslot.timeslot}.\nСтуденты в твоей команде:\n{', '.join([f'{student.name}: {student.tg_username}' for student in users_team.students.all()])}",
-            reply_markup=None,
+        bot.send_message(
+            call.message.chat.id,
+            f"{student.name}, ты уже записан на командый проект",
         )
-        # bot.answer_callback_query(
-        #     callback_query_id=call.id,
-        #     show_alert=True,
-        #     text=f"Ты успешно записан на выбранное время, your team ID {users_team}, your team PM {users_team.pm} Students in your team: {[student.name for student in users_team.students.all()]}",
-        # )
 
 
 # @bot.message_handler(commands=["help"])
