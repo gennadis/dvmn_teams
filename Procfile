@@ -1,3 +1,3 @@
-web: python manage.py runserver 0.0.0.0:\$PORT
 worker: python manage.py telebot
+web: gunicorn dvmn_teams.wsgi
 release: python manage.py migrate
