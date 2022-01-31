@@ -2,7 +2,7 @@
 
 python manage.py loaddata students.json pms.json timeslots.json
 """
-
+import os
 import json
 import random
 
@@ -62,7 +62,8 @@ def generate_pm_json(filename: str, count: int, fake: Faker) -> str:
                     "name": fake.name(),
                     "tg_username": f"@{fake.word()}_{fake.word()}",
                     "discord_username": f"@{fake.word()}#1234",
-                    "timeslot": [],
+                    # 18:00 - 22:00 timeslots for all PMs
+                    "timeslot": [21, 22, 23, 24, 25, 26, 27, 28],
                 },
             }
         )
@@ -84,6 +85,7 @@ def generate_students_json(filename: str, count: int, fake: Faker) -> str:
                     "discord_username": f"{fake.word()}#{random.randint(1_000, 10_000)}",
                     "is_far_east": random.choice([True, False]),
                     "timeslot": [],
+                    "in_team": False,
                 },
             }
         )
@@ -96,6 +98,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
         fake = Faker()
+        os.makedirs("./teams/fixtures/", exist_ok=True)
         generate_timeslots_json("./teams/fixtures/timeslots.json", START_HOUR, END_HOUR)
         generate_pm_json("./teams/fixtures/pms.json", PM_TOTAL_COUNT, fake)
         # generate_teams_json("./teams/fixtures/teams.json", TEAMS_TOTAL_COUNT)
