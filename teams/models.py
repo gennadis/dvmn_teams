@@ -40,6 +40,7 @@ class Student(models.Model):
         related_name="Students",
         blank=True,
     )
+    in_team = models.BooleanField(verbose_name="Student already in team", default=False)
 
     def __str__(self) -> str:
         return f"{self.name}, {self.tg_username}, {self.level}"

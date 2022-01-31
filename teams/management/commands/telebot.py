@@ -18,10 +18,16 @@ def start_message(message):
 
     try:
         student = Student.objects.get(tg_username=tg_username)
-        bot.send_message(
-            message.chat.id,
-            f"Привет, {student.name}!\nЯ помогу тебе записаться на теущий командный проект Devman. Для продолжения введи команду /enroll",
-        )
+        if not student.in_team:
+            bot.send_message(
+                message.chat.id,
+                f"Привет, {student.name}!\nЯ помогу тебе записаться на теущий командный проект Devman. Для продолжения введи команду /enroll",
+            )
+        else:
+            bot.send_message(
+                message.chat.id,
+                f"{student.name}, ты уже записан на командый проект",
+            )
     except:
         bot.send_message(
             message.chat.id,
@@ -99,6 +105,7 @@ def callback_query(call):
         users_team.students.add(student)
         users_team.save()
         student.in_team = True
+        student.timeslot = users_timeslot_pick
         student.save()
 
         bot.edit_message_text(
@@ -114,9 +121,9 @@ def callback_query(call):
         # )
 
 
-@bot.message_handler(commands=["help"])
-def start(message):
-    bot.send_message(message.chat.id, "Для записи на командный проект введи /enroll")
+# @bot.message_handler(commands=["help"])
+# def start(message):
+#     bot.send_message(message.chat.id, "Для записи на командный проект введи /enroll")
 
 
 class Command(BaseCommand):
