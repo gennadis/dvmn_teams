@@ -1,6 +1,7 @@
 # ProjectsAutomation Service
 
-This project ...
+This project automates the process of Dvmn project teams creation.
+
 
 ![Screenshot](Screenshot.png)
 
@@ -22,29 +23,36 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-4. Rename `.env.example` to `.env` and fill your secrets in it
+4. Rename `.env.example` to `.env` and fill your secrets in it.
+Important! Place `.env` in `dvmn_teams` folder.
 
 5. Migrate
 ```bash
 python manage.py migrate
 ```
 
-6. Create and load fake data in a database if needed
+6. Create and import fake fixtures if needed.  
+50 students and 2 PM will be generated and added to a database.
 ```bash
 python manage.py makefakes
 python manage.py loaddata students.json pms.json timeslots.json
 ```
 
-7. Make empty teams for pms and students
+7. Make empty teams for PMs and students.
+Generated teams will contain:  
+- PM
+- Timeslot
+- Group level
+- No students
 ```bash
 python manage.py maketeams
 ```
 
-8. Run server
+8. Run web server and telegram bot
 ```bash
-python manage.py runserver
+gunicorn dvmn_teams.wsgi
 python manage.py telebot
 ```
 
-9. Open
-Open app in browser [http://127.0.0.1:8000/teams/](http://127.0.0.1:8000/teams/)
+9. Open admin panel
+Open app in browser [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/)
