@@ -1,11 +1,11 @@
-from django.core.management.base import BaseCommand
-from teams.models import TimeSlot, Student, PM, Team
-from django.db.models import Count
-
-from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
-
 import os
+
 import telebot
+from django.core.management.base import BaseCommand
+from django.db.models import Count
+from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
+
+from teams.models import TimeSlot, Student, PM, Team
 
 
 token = os.environ["TELEGRAM_TOKEN"]
@@ -13,56 +13,62 @@ bot = telebot.TeleBot(token)
 
 
 @bot.message_handler(commands=["start"])
-def start_message(message):
+def start_message(message) -> Message:
     tg_username = f"@{message.chat.username}"
 
     try:
         student = Student.objects.get(tg_username=tg_username)
+
         if not student.in_team:
             bot.send_message(
-                message.chat.id,
-                f"Привет, {student.name}!\nЯ помогу тебе записаться на теущий командный проект Devman. Для продолжения введи команду /enroll",
+                chat_id=message.chat.id,
+                text=f"""Привет, {student.name}!\n
+                Я помогу тебе записаться на текущий командный проект Devman.\n
+                Для продолжения введи команду /enroll""",
             )
         else:
             bot.send_message(
-                message.chat.id,
-                f"{student.name}, ты уже записан на командый проект",
+                chat_id=message.chat.id,
+                text=f"""{student.name}, ты уже записан на командный проект.\n
+                Время созвона: {student.timeslot.timeslot.first()}.""",
             )
     except:
         bot.send_message(
-            message.chat.id,
-            "Вероятно, ты не являешься студентом Devman.\nВступай в наши ряды по ссылке: https://dvmn.org/",
+            chat_id=message.chat.id,
+            text="""Вероятно, ты не являешься студентом Devman.\n
+            Вступай в наши ряды по ссылке: https://dvmn.org/""",
         )
 
 
 @bot.message_handler(commands=["enroll"])
-def start(message):
+def start(message) -> Message:
     bot.send_message(
-        message.chat.id,
-        "Ты готов записаться на командный проект?",
-        reply_markup=gen_markup_pm(),
+        chat_id=message.chat.id,
+        text="Ты готов записаться на командный проект?",
+        reply_markup=draw_yes_no_buttons(),
     )
 
 
-def gen_markup_pm():
+def draw_yes_no_buttons() -> InlineKeyboardMarkup:
     markup = InlineKeyboardMarkup()
     markup.row_width = 2
     markup.add(
         InlineKeyboardButton("Да", callback_data="yes"),
         InlineKeyboardButton("Нет", callback_data="no"),
     )
+
     return markup
 
 
-def gen_markup_time_pm1(timeslots: list[tuple]):
+def draw_timeslots(timeslots: list[tuple]) -> InlineKeyboardMarkup:
     markup = InlineKeyboardMarkup()
     markup.row_width = 4
-
     button_list = [
-        InlineKeyboardButton(f"{pm_name}:\n{ts}", callback_data=ts_id)
-        for (ts_id, pm_name, ts) in timeslots
+        InlineKeyboardButton(f"{pm_name}:\n{timeslot}", callback_data=timeslot_pk)
+        for (timeslot_pk, pm_name, timeslot) in timeslots
     ]
     markup.add(*button_list)
+
     return markup
 
 
@@ -70,6 +76,7 @@ def gen_markup_time_pm1(timeslots: list[tuple]):
 def callback_query(call):
     tg_username = f"@{call.message.chat.username}"
     student = Student.objects.get(tg_username=tg_username)
+
     if not student.in_team:
         available_teams = (
             Team.objects.annotate(students_in_team=Count("students"))
@@ -87,48 +94,44 @@ def callback_query(call):
 
         if call.data == "yes":
             bot.send_message(
-                call.message.chat.id,
-                "Выбери продакт менеджера и удобное время для ежедневного созвона с командой",
-                reply_markup=gen_markup_time_pm1(timeslots),
+                chat_id=call.message.chat.id,
+                text="Выбери продакт менеджера и удобное время для ежедневного созвона с командой.",
+                reply_markup=draw_timeslots(timeslots),
             )
         elif call.data == "no":
             bot.send_message(
-                call.message.chat.id,
-                "Когда будешь готов - введи /start",
+                chat_id=call.message.chat.id,
+                text="Когда будешь готов - введи /start",
                 reply_markup=None,
             )
 
         else:
-            users_timeslot_pick = call.data
+            user_timeslot_pick = call.data
 
-            users_team = available_teams.filter(timeslot=users_timeslot_pick).first()
-            users_team.students.add(student)
-            users_team.save()
+            user_team = available_teams.filter(timeslot=user_timeslot_pick).first()
+            user_team.students.add(student)
+            user_team.save()
+
             student.in_team = True
-            # student.timeslot = users_timeslot_pick
+            student.timeslot.add(int(user_timeslot_pick))
             student.save()
 
             bot.edit_message_text(
                 chat_id=call.message.chat.id,
                 message_id=call.message.message_id,
-                text=f"Отлично!\nТы записан к {users_team.pm}: {users_team.pm.tg_username} на {users_team.timeslot.timeslot}.\nСтуденты в твоей команде:\n{', '.join([f'{student.name}: {student.tg_username}' for student in users_team.students.all()])}",
+                text=f"""Отлично!\n
+                Ты записан к {user_team.pm}: {user_team.pm.tg_username} на {user_team.timeslot.timeslot}.\n
+                Студенты в твоей команде:\n
+                {', '.join([f'{student.name}: {student.tg_username}' for student in user_team.students.all()])}""",
                 reply_markup=None,
             )
-            # bot.answer_callback_query(
-            #     callback_query_id=call.id,
-            #     show_alert=True,
-            #     text=f"Ты успешно записан на выбранное время, your team ID {users_team}, your team PM {users_team.pm} Students in your team: {[student.name for student in users_team.students.all()]}",
-            # )
+
     else:
         bot.send_message(
-            call.message.chat.id,
-            f"{student.name}, ты уже записан на командый проект",
+            chat_id=call.message.chat.id,
+            text=f"""{student.name}, ты уже записан на командный проект.\n
+                Время созвона: {student.timeslot.timeslot.first()}.""",
         )
-
-
-# @bot.message_handler(commands=["help"])
-# def start(message):
-#     bot.send_message(message.chat.id, "Для записи на командный проект введи /enroll")
 
 
 class Command(BaseCommand):
