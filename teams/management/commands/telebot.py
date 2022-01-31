@@ -12,16 +12,30 @@ token = os.environ["TELEGRAM_TOKEN"]
 bot = telebot.TeleBot(token)
 
 
-def gen_markup_time_pm1(timeslots: list[tuple]):
-    markup = InlineKeyboardMarkup()
-    markup.row_width = 4
+@bot.message_handler(commands=["start"])
+def start_message(message):
+    tg_username = f"@{message.chat.username}"
 
-    button_list = [
-        InlineKeyboardButton(f"{ts}", callback_data=ts_id)
-        for (ts_id, pm_name, ts) in timeslots
-    ]
-    markup.add(*button_list)
-    return markup
+    try:
+        student = Student.objects.get(tg_username=tg_username)
+        bot.send_message(
+            message.chat.id,
+            f"Привет, {student.name}!\nЯ помогу тебе записаться на теущий командный проект Devman. Для продолжения введи команду /enroll",
+        )
+    except:
+        bot.send_message(
+            message.chat.id,
+            "Вероятно, ты не являешься студентом Devman.\nВступай в наши ряды по ссылке: https://dvmn.org/",
+        )
+
+
+@bot.message_handler(commands=["enroll"])
+def start(message):
+    bot.send_message(
+        message.chat.id,
+        "Ты готов записаться на командный проект?",
+        reply_markup=gen_markup_pm(),
+    )
 
 
 def gen_markup_pm():
@@ -34,29 +48,16 @@ def gen_markup_pm():
     return markup
 
 
-@bot.message_handler(commands=["start"])
-def start_message(message):
-    tg_username = f"@{message.chat.username}"
+def gen_markup_time_pm1(timeslots: list[tuple]):
+    markup = InlineKeyboardMarkup()
+    markup.row_width = 4
 
-    try:
-        student = Student.objects.get(tg_username=tg_username)
-
-        bot.send_message(
-            message.chat.id,
-            f"Привет, {student.name} я бот который поможет тебе записаться на проекты Devman, я подберу тебе подходящее время веди команду /enroll",
-        )
-    except:
-        bot.send_message(
-            message.chat.id,
-            "Уходи.",
-        )
-
-
-@bot.message_handler(commands=["enroll"])
-def start(message):
-    bot.send_message(
-        message.chat.id, "Готов записаться на проект?", reply_markup=gen_markup_pm()
-    )
+    button_list = [
+        InlineKeyboardButton(f"{pm_name}:\n{ts}", callback_data=ts_id)
+        for (ts_id, pm_name, ts) in timeslots
+    ]
+    markup.add(*button_list)
+    return markup
 
 
 @bot.callback_query_handler(func=lambda call: True)
@@ -81,13 +82,13 @@ def callback_query(call):
     if call.data == "yes":
         bot.send_message(
             call.message.chat.id,
-            "У ПМов есть следующее свободное время, выбирай",
+            "Выбери продакт менеджера и удобное время для ежедневного созвона с командой",
             reply_markup=gen_markup_time_pm1(timeslots),
         )
     elif call.data == "no":
         bot.send_message(
             call.message.chat.id,
-            "Заходи когда будет удобно введи /start и подтверди выбор",
+            "Когда будешь готов - введи /start",
             reply_markup=None,
         )
 
@@ -103,19 +104,19 @@ def callback_query(call):
         bot.edit_message_text(
             chat_id=call.message.chat.id,
             message_id=call.message.message_id,
-            text=f"Ты успешно записан на выбранное время, your team ID {users_team}, your team PM {users_team.pm} Students in your team: {[student.name for student in users_team.students.all()]}",
+            text=f"Отлично!\nТы записан к {users_team.pm}: {users_team.pm.tg_username} на {users_team.timeslot.timeslot}.\nСтуденты в твоей команде:\n{', '.join([f'{student.name}: {student.tg_username}' for student in users_team.students.all()])}",
             reply_markup=None,
         )
-        bot.answer_callback_query(
-            callback_query_id=call.id,
-            show_alert=True,
-            text=f"Ты успешно записан на выбранное время, your team ID {users_team}, your team PM {users_team.pm} Students in your team: {[student.name for student in users_team.students.all()]}",
-        )
+        # bot.answer_callback_query(
+        #     callback_query_id=call.id,
+        #     show_alert=True,
+        #     text=f"Ты успешно записан на выбранное время, your team ID {users_team}, your team PM {users_team.pm} Students in your team: {[student.name for student in users_team.students.all()]}",
+        # )
 
 
 @bot.message_handler(commands=["help"])
 def start(message):
-    bot.send_message(message.chat.id, "просто введи /enroll")
+    bot.send_message(message.chat.id, "Для записи на командный проект введи /enroll")
 
 
 class Command(BaseCommand):
