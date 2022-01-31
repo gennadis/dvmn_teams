@@ -26,14 +26,15 @@ pip install -r requirements.txt
 4. Rename `.env.example` to `.env` and fill your secrets in it.
 Important! Place `.env` in `dvmn_teams` folder.
 
-5. Create Django superuser
-```bash
-python manage.py createsuperuser
-```
 
-6. Migrate
+5. Migrate
 ```bash
 python manage.py migrate
+```
+
+6. Create Django superuser
+```bash
+python manage.py createsuperuser
 ```
 
 7. Create and import fake fixtures if needed.  
