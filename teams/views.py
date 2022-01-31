@@ -15,13 +15,6 @@ def index(request):
         )
         .all()
     )
-    # for team in populated_teams:
-    #     print(
-    #         team.id,
-    #         team.level,
-    #         team.timeslot.timeslot,
-    #         [s.name for s in team.students.all()],
-    #     )
 
     context = {
         "populated_teams": populated_teams,
