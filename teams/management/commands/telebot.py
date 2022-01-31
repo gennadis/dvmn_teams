@@ -10,12 +10,6 @@ import telebot
 
 token = os.environ["TELEGRAM_TOKEN"]
 bot = telebot.TeleBot(token)
-print(bot.get_me())
-
-
-def check_user(user):
-    if user:
-        return f"@{user}"
 
 
 def gen_markup_time_pm1(timeslots: list[tuple]):
@@ -28,17 +22,6 @@ def gen_markup_time_pm1(timeslots: list[tuple]):
     ]
     markup.add(*button_list)
     return markup
-
-
-# def gen_markup_time_pm2():
-#     markup = InlineKeyboardMarkup()
-#     markup.row_width = 4
-#     button_list = [
-#         InlineKeyboardButton(f"{i}", callback_data=f"{i}") for i in time_slot_pm2
-#     ]
-#     print(button_list)
-#     markup.add(*button_list)
-#     return markup
 
 
 def gen_markup_pm():
@@ -133,55 +116,6 @@ def callback_query(call):
 @bot.message_handler(commands=["help"])
 def start(message):
     bot.send_message(message.chat.id, "просто введи /enroll")
-
-    # end_time = 0
-    # time_slot_pm1 = []
-    # time_slot_pm2 = []
-
-    # create Student instance
-    # student = Student.objects.get(tg_username=input("Enter students tg_username "))
-    # print(f"Hello, {student.name}!")
-
-    # get all available teams filtered by level and capacity
-    # available_teams = (
-    #     Team.objects.annotate(students_in_team=Count("students"))
-    #     .filter(
-    #         level=student.level,
-    #         students_in_team__lt=3,
-    #     )
-    #     .all()
-    # )
-    # print(f"Available teams IDs: {[team.pk for team in available_teams]}")
-
-    # get available timeslots
-    # timeslots = [
-    #     (team.timeslot.pk, team.pm.name, team.timeslot.timeslot)
-    #     for team in available_teams
-    # ]
-    # print(f"Available teams timeslots: {timeslots}")
-
-    # # get user's timeslot choice primary key
-    # users_ts_choice = input("Choose timeslot primary key ")
-
-    # # get first team that fits by timeslot - from available teams
-    # users_team = available_teams.filter(timeslot=users_ts_choice).first()
-    # print(f"Your team ID is {users_team}")
-
-    # # add student to team and save
-    # users_team.students.add(student)
-    # users_team.save()
-    # student.in_team = True
-    # student.save()
-
-    # # get all team students
-    # print(
-    #     f"Students in your team: {[student.name for student in users_team.students.all()]}"
-    # )
-
-    # # check all populated teams
-    # print("#" * 50)
-    # print("ALL TEAMS")
-    # get_populated_teams()
 
 
 class Command(BaseCommand):
