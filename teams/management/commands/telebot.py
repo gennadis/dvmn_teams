@@ -105,7 +105,7 @@ def callback_query(call):
         users_team.students.add(student)
         users_team.save()
         student.in_team = True
-        student.timeslot = users_timeslot_pick
+        # student.timeslot = users_timeslot_pick
         student.save()
 
         bot.edit_message_text(
