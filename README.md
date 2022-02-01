@@ -1,6 +1,6 @@
 # ProjectsAutomation Service
 
-This project automates the process of Dvmn project teams creation.
+This project automates the process of Dvmn project teams creation.  
 You can install and run it on your local machine or use preconfigured [Heroku app](http://blooming-stream-71357.herokuapp.com/admin)
 
 
@@ -24,7 +24,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-4. Rename `.env.example` to `.env` and fill your secrets in it.
+4. Rename `.env.example` to `.env` and fill your secrets in it.  
 Important! Place `.env` in `dvmn_teams` folder.
 
 
@@ -38,14 +38,14 @@ python manage.py migrate
 python manage.py createsuperuser
 ```
 
-7. Create and import fake fixtures if needed.  
+7. Create and import fake fixtures if needed  
 50 students and 2 PM will be generated and added to a database.
 ```bash
 python manage.py makefakes
 python manage.py loaddata students.json pms.json timeslots.json
 ```
 
-8. Make empty teams for PMs and students.
+8. Make empty teams for PMs and students  
 Generated teams will contain:  
 - PM
 - Timeslot
@@ -66,11 +66,11 @@ python manage.py telebot
 ```
 
 ## Usage
-1. Open admin panel
+1. Open admin panel  
 Open app in browser [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/)
 
-2. Add new student to test bot
-Make sure to enter your real Telegram `@username` otherwise bot won't recognize you as a student.
+2. Add yourself as a Student to test the bot  
+Make sure to enter your real Telegram `@username`, otherwise bot won't recognize you as a student.
 
-3. Start using bot
-@Devmanenrollbot
+3. Start using bot  
+`@Devmanenrollbot`
