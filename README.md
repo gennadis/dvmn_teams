@@ -72,5 +72,4 @@ Open app in browser [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/)
 2. Add yourself as a Student to test the bot  
 Make sure to enter your real Telegram `@username`, otherwise bot won't recognize you as a student.
 
-3. Start using bot  
-`@Devmanenrollbot`
+3. Start using bot by typing `/start` command
