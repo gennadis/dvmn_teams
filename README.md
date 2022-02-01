@@ -1,11 +1,12 @@
 # ProjectsAutomation Service
 
 This project automates the process of Dvmn project teams creation.
+You can install and run it on your local machine or use preconfigured [Heroku app](http://blooming-stream-71357.herokuapp.com/admin)
 
 
 ![Screenshot](Screenshot.png)
 
-## Installation notes
+## Installation
 1. Clone project
 ```bash
 git clone https://github.com/gennadis/dvmn_teams.git
@@ -64,5 +65,12 @@ gunicorn dvmn_teams.wsgi
 python manage.py telebot
 ```
 
-11. Open admin panel
+## Usage
+1. Open admin panel
 Open app in browser [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/)
+
+2. Add new student to test bot
+Make sure to enter your real Telegram `@username` otherwise bot won't recognize you as a student.
+
+3. Start using bot
+@Devmanenrollbot
